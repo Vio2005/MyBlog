@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            display:flex;
+            gap:20px;
+            flex-wrap: wrap;
+     justify-content: center;
+        }
+        img{
+            width:300px;
+            height:240px;
+           
+            
+        }
+        table{
+            width:960px;
+            background-color: rgb(255, 255, 255);
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-top: 40px;
+            box-shadow: 0 3px 8px rgba(196, 196, 196, 0.795);
+            
+        }
+        
+      
+        body{
+            text-align: justify;
+            background-color:rgb(246, 253, 255);
+            font-size: 17px;
+            font-family: 'Georgia';
+        }
+        .text{
+            padding-left:20px;
+            padding-right:20px;
+            padding-bottom: 20px;
+        }
+      .photo1{
+        text-align: right;
+        padding-top: 20px;
+      }
+      .photo2{
+       text-align: center;
+        padding-top: 20px;
+      }
+      .photo3{
+        text-align: left;
+        padding-top: 20px;
+      }
+      .blog{
+        border:none;
+        background-color: skyblue;
+        color:black;
+        width:130px;
+        height:40px;
+        font-size: 16px;
+       position:absolute;
+       left:16%;
+       border-radius: 10px;
+      }
+      .read{
+        border:none;
+        background-color: black;
+        color:white;
+        width:140px;
+        height:40px;
+        font-size: 16px;
+        position:relative;
+        left:11%;
+        border-radius: 10px;
+       
+      }
+      .date{
+        color:rgb(134, 133, 133);
+      }
+      h2{
+        font-size: 30px;
+      }
+    </style>
+</head>
+<body><h1 align="center" >My Blog</h1>
+    <div class="container">
+    {% for i in blog_data %}
+    <table align="center">
+    <tr>
+    <td class="photo1"><img src="{{ i.photo1.url }}" alt="Post image"></td>
+        <td class="photo2"><img src="{{ i.photo2.url }}" alt="Post image"></td>
+            <td class="photo3"><img src="{{ i.photo3.url }}" alt="Post image"></td>
+</tr>
+<tr>
+    <td  class="text" colspan="3">
+        <p><h2>{{i.title}}</h2></p>
+        <p>{{i.post_body}}</p>
+        <p class="date">{{i.date}}</p>
+        <button class="read">read now</button>
+        <button class="blog">blogs update</button>
+</td>
+</tr>
+</table>
+    {% endfor %}
+</div>
+</body>
+</html>
