@@ -26,6 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',blogdata,name='blog'),
     path('createblog/',createblog,name='createblog'),
+    path('blogdetail/<int:id>/',blogdetail,name='blogdetail'),
+    path('blogdelete/<int:id>/',blogdelete,name='blogdelete'),
+
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

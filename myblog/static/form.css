@@ -5,15 +5,16 @@ body{
 }
 input[type="submit"] {
     margin-left:35%;
-    margin-top:20px;
-    border:none;
-        background-color: skyblue;
-        color:black;
-        width:100px;
-        height:30px;
-        border-radius: 20px;
-        font-size: 14px;
-        text-align: center;
+
+    border:1px solid grey;
+    background-color: skyblue;
+    color:black;
+    width:100px;
+    height:30px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+         
   }
   input[type="submit"]:hover{
     background-color: rgb(94, 141, 160);
@@ -32,17 +33,16 @@ textarea,
 select {
   width:300px; 
   padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 16px;
+  margin-top: 0px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
 }
 
  table{
     background-color:rgb(255, 255, 255);
-    width:450px;
-    height:550px;
+    width:400px;
+    height:490px;
     margin-top:20px;
     box-shadow: 0 3px 8px rgba(196, 196, 196, 0.795);
  }

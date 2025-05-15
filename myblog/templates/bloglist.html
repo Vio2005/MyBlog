@@ -99,7 +99,7 @@
         <p><h2>{{i.title}}</h2></p>
         <p>{{i.post_body}}</p>
         <p class="date">{{i.date}}</p>
-        <button class="read">read now</button>
+        <a href="{% url 'blogdetail' i.id %}"><button class="read">read now<button></a>
         <button class="blog">blogs update</button>
 </td>
 </tr>

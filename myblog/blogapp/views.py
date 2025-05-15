@@ -22,3 +22,18 @@ def createblog(request):
            
             return HttpResponse('Error')
     return render(request,'create.html',{'fm':fm})
+
+def blogdetail(request,id):
+    data=Blog.objects.filter(id=id)
+    
+    context={"data":data}
+    return render(request,'blogdetail.html',context)
+
+def blogdelete(request,id):
+    data=Blog.objects.filter(id=id).delete()
+    return redirect('/blog')
+
+
+
+
+
