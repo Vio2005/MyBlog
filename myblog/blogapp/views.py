@@ -2,11 +2,13 @@ from django.shortcuts import render,redirect,HttpResponse
 from .models import * 
 from .forms import *
 
+
 # Create your views here.
 def blogdata(request):
     blog_data=Blog.objects.all()
     context={'blog_data':blog_data}
     return render(request,'bloglist.html',context)
+
 
 def createblog(request):
     
@@ -33,6 +35,13 @@ def blogdelete(request,id):
     data=Blog.objects.filter(id=id).delete()
     return redirect('/blog')
 
+
+def updateblog(request, id):
+    data = Blog.objects.get(id=id)
+    obj = PostModelForm(request.POST, request.FILES, instance=data)
+    if obj.is_valid():
+        obj.save()
+    return redirect('/blog')
 
 
 

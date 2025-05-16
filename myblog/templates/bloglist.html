@@ -61,8 +61,9 @@
         width:130px;
         height:40px;
         font-size: 16px;
-       position:absolute;
-       left:16%;
+        position:relative;
+       left:0%;
+       bottom:2%;
        border-radius: 10px;
       }
       .read{
@@ -99,8 +100,8 @@
         <p><h2>{{i.title}}</h2></p>
         <p>{{i.post_body}}</p>
         <p class="date">{{i.date}}</p>
-        <a href="{% url 'blogdetail' i.id %}"><button class="read">read now<button></a>
-        <button class="blog">blogs update</button>
+        <a href="{% url 'blogdetail' i.id %}"><button class="blog">read now</button></a>
+       
 </td>
 </tr>
 </table>
